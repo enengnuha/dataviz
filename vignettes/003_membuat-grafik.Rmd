@@ -179,7 +179,9 @@ Kita ingin melihat kota/kabupaten mana saja yang memiliki jalan dengan kondisi b
 jabar_road %>% 
   filter(condition == "Good") %>% 
   ggplot(aes(x = district, y = road_length)) +
-  geom_col()
+  geom_col() +
+  theme(
+    axis.text = element_text(angle = 30))
 ```
 
 Kita juga dapat membuat *bar plot* untuk keempat kondisi jalan di tiap kota/kabupaten dengan membuat *grouped bar plot* dan membedakan warna kolom-kolomnya. Untuk menghasilkan *grouped bar plot*, kita menggunakan argumen `position = "dodge"` pada fungsi `geom_col()`. Gunakan variabel `condition` untuk argumen `fill`.
