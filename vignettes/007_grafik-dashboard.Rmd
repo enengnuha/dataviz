@@ -12,6 +12,7 @@ runtime: shiny
 knitr::opts_chunk$set(echo = FALSE)
 library(tidyverse)
 library(ggthemr)
+library(shiny)
 ggthemr("flat", type = "outer")
 ```
 
